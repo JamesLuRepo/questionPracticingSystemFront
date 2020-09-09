@@ -162,26 +162,6 @@
                 checkLogin() {
                     //判断当前用户是否登录了，判断现在是否有登录人的信息
 
-
-                    /*  状态1：未登录
-                    document.querySelector("#register").style.display = 'block';
-                    document.querySelector("#login").style.display = 'block';
-                    document.querySelector("#myexam").style.display = 'none';
-                    document.querySelector("#exam").style.display = 'none';
-                    document.querySelector("#exit").style.display = 'none';
-                    document.querySelector("#nickname").style.display = 'none';
-                    */
-
-
-                    /*  状态2：已登录
-                    document.querySelector("#register").style.display = 'none';
-                    document.querySelector("#login").style.display = 'none';
-                    document.querySelector("#myexam").style.display = 'block';
-                    document.querySelector("#exam").style.display = 'block';
-                    document.querySelector("#exit").style.display = 'block';
-                    document.querySelector("#nickname").style.display = 'block';
-                    */
-
                     let _this = this; //把this的名字转成_this
                     //从localStorage中获取数据，获取当前保存的用户名，再根据用户名获取后台是否登录的状态
                     if (!window.localStorage) {

@@ -36,7 +36,7 @@
                     <div class="tc-list">
                         <ul class="detail-list" v-for="question in questions">
                             <li class="qa-item">
-                                <div class="fl record">
+                            <div class="fl record">
                                     <div class="number">
                                         <div class="border answer">
                                             <p class="usenum"></p>
@@ -106,15 +106,19 @@
             checked:[],
         },
         methods: {
+
+
             /*-------------------------单选多选题处理结构    开始-------------------------
                 //1.分情况处理，单选题与多选题处理方式不同
                 //2.约定回传的答案格式       单选题由题号与选项组成，多选题由题号和多个选项组成
+                111     111-3
+                222     222-1   222-2   22-3
                 {
-                    questionId:XXXXXXXX,
+                    questionId:XXXXXXXX,    单选
                     answer:mm
                 }
                 {
-                    questionId:XXXXXXXX,
+                    questionId:XXXXXXXX,    多选
                     answer:mm,nn
                 }
                 //3.无论是单选还是多选，最终都是将所有题目的答案结果放置在一个数据中保存（results），整体操作就是为results添加/修改数据
@@ -134,9 +138,9 @@
 
                 //组织数据（要加入到results中的数据）
                 var temp = {"questionId":item.questionId,"answer":item.id};
-                //alert(JSON.stringify(temp))
+                // alert(JSON.stringify(temp))
 
-                //删除当前results中已经存在的本题目对应的数据
+                //删除当前results中已经存在的本题目对应的数据[过滤的方式，如果两个不一样就别返回了]
                 this.results = this.results.filter(e=>{return e.questionId !== item.questionId})
                 //alert("results[操作前]：" + JSON.stringify(this.results))
 
@@ -174,10 +178,10 @@
                         temp.answer = temp.answer + "," + item.id;
                     }else{
                         //删除该答案
-                        var arr = temp.answer.split(",");
+                        var arr = temp.answer.split(",");//按逗号分割成数组
                         var index = arr.indexOf(item.id);
-                        arr.splice(index,1);
-                        temp.answer = arr.join(",");
+                        arr.splice(index,1);//删除元素，并将这位拿掉
+                        temp.answer = arr.join(",");//将数组合并成字符串
                     }
                 }
 
@@ -187,11 +191,11 @@
 
                 //删除当前results中已经存在的本题目对应的数据
                 this.results = this.results.filter(e=>{return e.questionId !== item.questionId})
-                //alert("results[操作前]：" + JSON.stringify(this.results))
+                // alert("results[操作前]：" + JSON.stringify(this.results))
 
                 //将本次操作的结果加入到results
                 this.results.push(temp);
-                //alert("results[操作后]：" + JSON.stringify(this.results))
+                // alert("results[操作后]：" + JSON.stringify(this.results))
 
             },
             submitForm(formName) {
@@ -199,7 +203,7 @@
                     alert("请检查题目是否全部选择");
                     return;
                 }else{
-                    if(window.confirm("确定交卷吗？")) {
+                    if(window.confirm("确定交卷吗？")) {//弹窗
                         //把json数据转成字符串
                         let str = JSON.stringify(this.results);
                         //获取localSotrage
@@ -223,13 +227,13 @@
                     //5.得到响应数据
                     var res = response.data;
                     alert(JSON.stringify(res));
-                    _this.questions = res.data;
+                   _this.questions = res.data;
                 }).catch(function (err) {
                     console.log(err)
                 });
             }
         },
-        created(){
+        created(){//刚一打开就执行
             this.findQuestion();
         },
     });

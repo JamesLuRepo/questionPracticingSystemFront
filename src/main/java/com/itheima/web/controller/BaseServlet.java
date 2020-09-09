@@ -1,7 +1,9 @@
 package com.itheima.web.controller;
 
 import com.alibaba.fastjson.JSON;
+import com.itheima.service.front.impl.ExamServiceImpl;
 import com.itheima.service.front.impl.MemberServiceImpl;
+import com.itheima.service.front.impl.front.ExamService;
 import com.itheima.service.front.impl.front.MemberService;
 
 import javax.servlet.ServletException;
@@ -14,10 +16,12 @@ import java.lang.reflect.Method;
 
 public class BaseServlet extends HttpServlet {
     protected MemberService memberService;
+    protected ExamService examService;
 
     @Override
     public void init() throws ServletException {
         memberService = new MemberServiceImpl();
+        examService = new ExamServiceImpl();
     }
 
     protected <T> T getData(HttpServletRequest request, Class<T> clazz) throws IOException {
