@@ -1,3 +1,4 @@
+D:\mm_exam\src\main\java\com\itheima\domain\front\ExamQuestion.java
 D:\mm_exam\src\main\java\com\itheima\utils\JedisUtils.java
 D:\mm_exam\src\main\java\com\itheima\utils\BeanUtil.java
 D:\mm_exam\src\main\java\com\itheima\service\front\impl\front\MemberService.java
@@ -10,11 +11,14 @@ D:\mm_exam\src\main\java\com\itheima\domain\store\QuestionItem.java
 D:\mm_exam\src\main\java\com\itheima\dao\store\QuestionDao.java
 D:\mm_exam\src\main\java\com\itheima\utils\TransactionUtil.java
 D:\mm_exam\src\main\java\com\itheima\web\controller\front\MemberServlet.java
+D:\mm_exam\src\main\java\com\itheima\dao\front\ExamPaperDao.java
 D:\mm_exam\src\main\java\com\itheima\domain\store\Question.java
 D:\mm_exam\src\main\java\com\itheima\service\front\impl\ExamServiceImpl.java
 D:\mm_exam\src\main\java\com\itheima\web\controller\Result.java
+D:\mm_exam\src\main\java\com\itheima\domain\front\ExamPaper.java
 D:\mm_exam\src\main\java\com\itheima\service\front\impl\front\ExamService.java
 D:\mm_exam\src\main\java\com\itheima\web\controller\Code.java
+D:\mm_exam\src\main\java\com\itheima\dao\front\ExamQuestionDao.java
 D:\mm_exam\src\main\java\com\itheima\domain\front\Member.java
 D:\mm_exam\src\main\java\com\itheima\factory\MapperFactory.java
 D:\mm_exam\src\main\java\com\itheima\service\front\impl\MemberServiceImpl.java

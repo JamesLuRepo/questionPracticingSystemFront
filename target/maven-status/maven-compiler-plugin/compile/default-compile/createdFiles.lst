@@ -1,6 +1,7 @@
 com\itheima\web\controller\front\ExamServlet.class
 com\itheima\domain\front\ExamPaper.class
 com\itheima\utils\JedisUtils.class
+com\itheima\dao\front\ExamQuestionDao.class
 com\itheima\service\front\impl\front\MemberService.class
 com\itheima\domain\store\QuestionItem.class
 com\itheima\domain\store\Question.class
@@ -8,6 +9,7 @@ com\itheima\utils\TransactionUtil.class
 com\itheima\web\controller\Code.class
 com\itheima\utils\MD5Util.class
 com\itheima\web\controller\Result.class
+com\itheima\dao\front\ExamPaperDao.class
 com\itheima\utils\BeanUtil.class
 com\itheima\web\controller\BaseServlet.class
 com\itheima\service\front\impl\ExamServiceImpl.class
